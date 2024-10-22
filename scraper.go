@@ -3,12 +3,17 @@ package main
 import (
 	"fmt"
 	"os"
+	"regexp"
 
 	"github.com/gocolly/colly"
 )
 
 func main() {
 	args := os.Args
+	if len(args) < 2 {
+		fmt.Println("Usage: go run scraper.go <GitHub URL>")
+		return
+	}
 	url := args[1]
 	collector := colly.NewCollector()
 
@@ -23,9 +28,17 @@ func main() {
 	collector.OnError(func(r *colly.Response, e error) {
 		fmt.Println("Blimey, an error occurred!:", e)
 	})
-	collector.Visit(url)
-	collector.OnHTML(".div-main", func(e *colly.HTMLElement) {
-		// Your code to handle the HTML element matching the selector
+	collector.OnHTML("body", func(e *colly.HTMLElement) {
+		bodyText := e.Text
+		if containsOpenAIKey(bodyText) {
+			fmt.Println("Alarm! Found an OpenAI API key on", e.Request.URL)
+		}
 	})
-	
+	collector.Visit(url)
+}
+
+
+func containsOpenAIKey(text string) bool {
+	re := regexp.MustCompile(`sk-[a-zA-Z0-9]{48}`) // OpenAI API keys are 48 characters long with the prefix "sk-"
+	return re.MatchString(text)
 }
