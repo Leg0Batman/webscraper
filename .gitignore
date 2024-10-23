@@ -1,0 +1,31 @@
+# Binaries for programs and plugins
+*.exe
+*.dll
+*.so
+*.dylib
+
+# Output of the Go compiler
+*.out
+
+# Go workspace file
+go.work
+
+# Dependency directories
+vendor/
+
+# IDE/editor specific files
+.vscode/
+.idea/
+*.swp
+
+# macOS specific files
+.DS_Store
+
+# iOS specific files
+ios_app/OpenAIKeyFinder/*.xcworkspace
+ios_app/OpenAIKeyFinder/*.xcuserdata
+ios_app/OpenAIKeyFinder/*.xcuserstate
+ios_app/OpenAIKeyFinder/*.xcuserdatad
+ios_app/OpenAIKeyFinder/*.xcodeproj/project.xcworkspace
+ios_app/OpenAIKeyFinder/*.xcodeproj/xcuserdata
+ios_app/OpenAIKeyFinder/*.xcodeproj/project.xcworkspace/xcuserdata
