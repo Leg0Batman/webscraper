@@ -1,24 +1,25 @@
-package utils
+package scraper
 
 import (
-    "github.com/patrickmn/go-cache"
-    "time"
+	"time"
+
+	"github.com/patrickmn/go-cache"
 )
 
 type Cache struct {
-    cache *cache.Cache
+	cache *cache.Cache
 }
 
 func NewCache() *Cache {
-    return &Cache{
-        cache: cache.New(5*time.Minute, 10*time.Minute),
-    }
+	return &Cache{
+		cache: cache.New(5*time.Minute, 10*time.Minute),
+	}
 }
 
 func (c *Cache) Set(key string, value interface{}) {
-    c.cache.Set(key, value, cache.DefaultExpiration)
+	c.cache.Set(key, value, cache.DefaultExpiration)
 }
 
 func (c *Cache) Get(key string) (interface{}, bool) {
-    return c.cache.Get(key)
+	return c.cache.Get(key)
 }
