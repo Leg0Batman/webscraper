@@ -6,6 +6,10 @@
 	objectVersion = 77;
 	objects = {
 
+/* Begin PBXBuildFile section */
+		A9FAE0CE2CCA957800DBF492 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = A9FAE0CD2CCA956D00DBF492 /* Info.plist */; };
+/* End PBXBuildFile section */
+
 /* Begin PBXContainerItemProxy section */
 		A9FAE0AE2CCA3EAE00DBF492 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
@@ -27,6 +31,7 @@
 		A9FAE09C2CCA3EAB00DBF492 /* scrapem.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = scrapem.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FAE0AD2CCA3EAE00DBF492 /* scrapemTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scrapemTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		A9FAE0B72CCA3EAE00DBF492 /* scrapemUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = scrapemUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		A9FAE0CD2CCA956D00DBF492 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedRootGroup section */
@@ -79,6 +84,7 @@
 				A9FAE0B02CCA3EAE00DBF492 /* scrapemTests */,
 				A9FAE0BA2CCA3EAE00DBF492 /* scrapemUITests */,
 				A9FAE09D2CCA3EAB00DBF492 /* Products */,
+				A9FAE0CD2CCA956D00DBF492 /* Info.plist */,
 			);
 			sourceTree = "<group>";
 		};
@@ -212,6 +218,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A9FAE0CE2CCA957800DBF492 /* Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
